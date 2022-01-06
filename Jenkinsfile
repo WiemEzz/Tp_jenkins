@@ -13,7 +13,7 @@ pipeline {
       steps {
         sh '''if test `grep -c formation /etc/passwd` -ne 0
 then 
-sudo find /home/formation -user formation  > /tmp/formation
+find /tmp -user formation  > /tmp/formation
 fi
 '''
       }
