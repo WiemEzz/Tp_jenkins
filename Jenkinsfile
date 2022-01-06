@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('stage1') {
       steps {
-        sh '''date
+        sh '''grep user /etc/passwd
+
 '''
       }
     }
