@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('stage1') {
       steps {
-        sh '''sh \'date\'
-sh \'mkdir F1\''''
+        sh '''date
+'''
       }
     }
 
