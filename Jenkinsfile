@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('stage1') {
       steps {
-        sh '''grep user /etc/passwd
+        sh '''grep formation /etc/passwd
 
 '''
       }
@@ -11,9 +11,9 @@ pipeline {
 
     stage('stage2') {
       steps {
-        sh '''if test `grep -c user /etc/passwd` -ne 0
+        sh '''if test `grep -c formation /etc/passwd` -ne 0
 then 
-find / -user user  > /tmp/orsys
+find / -user formation  > /tmp/formation
 fi
 '''
       }
@@ -21,7 +21,7 @@ fi
 
     stage('stage3') {
       steps {
-        sh '''for i in `cat /tmp/user`
+        sh '''for i in `cat /tmp/formation`
 do
 ls -il $i
 done
